@@ -14,7 +14,16 @@ Source subobject
 ====
 
 "source": {
+	"nick":"<nickname>",
+	"ident":"<identname>",
+	"ident-status":<number describing how identd responded>,
+	"hostname":<visible hostname of the user>,
+	etc
 }
+
+The source field describes the source of a message.
+"realhostname" may be used if the client receiving the message is
+allowed to see this information.
 
 PROTOCTL message
 ====
@@ -37,11 +46,11 @@ Old protocol: PRIVMSG <target name> :<message>
               NOTICE <target name> :<message>
 New protocol:
 {
-	"cmd":"PRIVMSG"
+	"cmd":"PRIVMSG",
 	"dest":{
 		"nick":"<target name>"
-	}
-	"message": "multi line message goes here, with all the escaping goodehs"
+	},
+	"message": "multi line message goes here, with all the escaping goodehs",
 	"data": freeform object/array/string
 }
 or s/PRIVMSG/NOTICE/
