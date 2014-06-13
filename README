@@ -1,0 +1,7 @@
+IRCng
+
+What is it?
+
+IRCng is a proposal that IRC systems in the future use the JSON format for 
+line exchange rather than the RFC1459 format, which is very hard
+to parse and is often confusing.
