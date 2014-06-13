@@ -14,10 +14,10 @@ Source subobject
 ====
 
 "source": {
-	"nick":"<nickname>",
-	"ident":"<identname>",
-	"ident-status":<number describing how identd responded>,
-	"hostname":<visible hostname of the user>,
+	"nick":"&lt;nickname&gt;",
+	"ident":"&lt;identname&gt;",
+	"ident-status":&lt;number describing how identd responded&gt;,
+	"hostname":&lt;visible hostname of the user&gt;,
 	etc
 }
 
@@ -27,13 +27,13 @@ allowed to see this information.
 
 PROTOCTL message
 ====
-Old protocol: PROTOCTL <version> <extensions> <message>
+Old protocol: PROTOCTL &lt;version&gt; &lt;extensions&gt; &lt;message&gt;
 New protocol: 
 {
 	"cmd":"PROTOCTL",
-	"protover":<protocol version as number>,
+	"protover":&lt;protocol version as number&gt;,
 	"extensions":{
-		"extname":"parameter", <etc>
+		"extname":"parameter", &lt;etc&gt;
 	}
 }
 
@@ -42,13 +42,13 @@ PROTOCTL is NOT used to downgrade the protocol; instead, downgrades are done aut
 
 PRIVMSG/NOTICE messages
 ====
-Old protocol: PRIVMSG <target name> :<message>
-              NOTICE <target name> :<message>
+Old protocol: PRIVMSG &lt;target name&gt; :&lt;message&gt;
+              NOTICE &lt;target name&gt; :&lt;message&gt;
 New protocol:
 {
 	"cmd":"PRIVMSG",
 	"dest":{
-		"nick":"<target name>"
+		"nick":"&lt;target name&gt;"
 	},
 	"message": "multi line message goes here, with all the escaping goodehs",
 	"data": freeform object/array/string
