@@ -27,8 +27,8 @@ allowed to see this information.
 
 PROTOCTL message
 ====
-Old protocol: PROTOCTL &lt;version&gt; &lt;extensions&gt; &lt;message&gt;
-New protocol: 
+Old protocol: PROTOCTL &lt;version&gt; &lt;extensions&gt; &lt;message&gt;<br />
+New protocol: <br />
 {<br />
 	"cmd":"PROTOCTL",<br />
 	"protover":&lt;protocol version as number&gt;,<br />
@@ -42,10 +42,10 @@ PROTOCTL is NOT used to downgrade the protocol; instead, downgrades are done aut
 
 PRIVMSG/NOTICE messages
 ====
-Old protocol: PRIVMSG &lt;target name&gt; :&lt;message&gt;
-              NOTICE &lt;target name&gt; :&lt;message&gt;
-New protocol:
-{
+Old protocol: PRIVMSG &lt;target name&gt; :&lt;message&gt;<br />
+              NOTICE &lt;target name&gt; :&lt;message&gt;<br />
+New protocol:<br />
+{<br />
 	"cmd":"PRIVMSG",<br />
 	"dest":{<br />
 		"nick":"&lt;target name&gt;"<br />
